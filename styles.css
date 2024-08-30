@@ -1,0 +1,437 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+a:hover {
+    color: #23527c;
+}
+
+/* Header Styles */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+}
+
+header nav a:hover {
+    color: #ccc;
+}
+
+/* Logo */
+
+.logo {
+    width: auto; /* Adjust width to auto */
+    height: auto; /* Adjust height to auto */
+    max-width: 100px; /* Set a maximum width for the logo */
+    max-height: 100px; /* Set a maximum height for the logo */
+    margin-right: 20px;
+}
+
+/* Hero Section */
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    background-image: url('pexels-francesco-ungaro-673648.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: #fff; /* Text color to ensure it stands out against the background */
+    text-align: center; /* Centers text within the section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
+}
+
+#home h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Channel Owner Image */
+
+.channel-owner-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+/* Social Media Links */
+
+.social-media-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.social-media-links li {
+    margin-right: 20px;
+}
+
+.social-media-links a {
+    color: #337ab7;
+}
+
+.social-media-links a:hover {
+    color: #23527c;
+}
+
+/* Search Bar */
+
+#search-form {
+    margin-top: 20px;
+    display: flex;
+    
+    justify-content: center; /* Centers the form within its container */
+    align-items: center; /* Vertically centers the items within the form */
+}
+
+#search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px; /* Space between input and button */
+}
+
+#search-input:focus {
+    border-color: #337ab7;
+}
+
+#search-form button[type="submit"] {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-form button[type="submit"]:hover {
+    background-color: #23527c;
+}
+
+/* Featured Content Section */
+
+#featured-content {
+    margin-top: 40px;
+}
+
+#featured-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#featured-content li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* Blog Section */
+
+#blog {
+    margin-top: 40px;
+}
+
+#blog ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#blog li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#blog-categories {
+    margin-top: 20px;
+}
+
+#blog-categories ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#blog-categories li {
+    margin-right: 20px;
+}
+
+/* Video Section */
+
+#videos {
+    margin-top: 40px;
+}
+
+/* Video List Styles */
+
+#video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#video-list li {
+    width: 100%; /* Ensure videos take full width on small screens */
+    max-width: 560px; /* Max width of videos */
+    margin-bottom: 20px;
+}
+
+#video-list iframe {
+    width: 100%; /* Full width for responsiveness */
+    height: auto; /* Adjust height automatically */
+}
+
+/* Video Gallery Styles */
+
+#video-gallery {
+    margin-top: 20px;
+}
+
+#video-gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#video-gallery li {
+    width: calc(33% - 20px); /* Adjust width to fit 3 videos per row with margin */
+    margin-bottom: 20px;
+}
+
+#video-gallery iframe {
+    width: 100%; /* Full width for responsiveness */
+    height: auto; /* Adjust height automatically */
+}
+
+/* About Section */
+
+#about {
+    margin-top: 40px;
+}
+
+#author-bio {
+    margin-top: 20px;
+}
+
+/* Contact Section */
+
+#contact {
+    margin-top: 40px;
+}
+
+#contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contact-form label {
+    margin-right: 10px;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: #337ab7;
+}
+
+#contact-form button[type="submit"] {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #23527c;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+
+/* Newsletter Signup */
+
+#newsletter-form {
+    margin-top: 20px;
+}
+
+#newsletter-form label {
+    margin-right: 10px;
+}
+
+#newsletter-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#newsletter-form input[type="email"]:focus {
+    border-color: #337ab7;
+}
+
+#newsletter-form button[type="submit"] {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#newsletter-form button[type="submit"]:hover {
+    background-color: #23527c;
+}
+
+/* Social Media Feed */
+
+#social-media-feed {
+    margin-top: 20px;
+}
+
+#social-media-feed h2 {
+    margin-bottom: 10px;
+}
+
+/* FAQ Section */
+
+#faq {
+    margin-top: 20px;
+}
+
+#faq h2 {
+    margin-bottom: 10px;
+}
+
+#faq ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#faq li {
+    margin-bottom: 10px;
+}
+
+/* Testimonials */
+
+#testimonials {
+    margin-top: 20px;
+}
+
+#testimonials h2 {
+    margin-bottom: 10px;
+}
+
+#testimonials ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#testimonials li {
+    margin-bottom: 10px;
+}
+
+/* Related Content */
+
+#related-content {
+    margin-top: 20px;
+}
+
+#related-content h2 {
+    margin-bottom: 10px;
+}
+
+#related-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#related-content li {
+    margin-bottom: 10px;
+}
