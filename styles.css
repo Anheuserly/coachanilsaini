@@ -160,6 +160,51 @@ header nav a:hover {
     background-color: #23527c;
 }
 
+
+
+#home form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the form items horizontally */
+    margin-top: 20px;
+}
+
+#home input[type="email"] {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 250px; /* Adjust width as needed */
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#home input[type="email"]:focus {
+    border-color: #337ab7; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+#home button[type="submit"] {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* Increased padding for a better look */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#home button[type="submit"]:hover {
+    background-color: #23527c; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#home button[type="submit"]:active {
+    background-color: #1e3a6e; /* Even darker color on click */
+    transform: scale(1); /* Reset scale on click */
+}
+
 /* Featured Content Section */
 
 #featured-content {
@@ -257,53 +302,162 @@ header nav a:hover {
 /* About Section */
 
 #about {
+    background-color: #fff;
+    padding: 40px;
     margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.about-content,
+.author-content {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.description,
+.bio {
+    margin-bottom: 15px;
 }
 
 #author-bio {
-    margin-top: 20px;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#author-bio h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    #about,
+    #author-bio {
+        padding: 20px;
+    }
+
+    #about h2,
+    #author-bio h3 {
+        font-size: 24px;
+    }
 }
 
 /* Contact Section */
 
 #contact {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
+}
+
+#contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
 }
 
 #contact-form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
 
 #contact-form label {
-    margin-right: 10px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-#contact-form input, #contact-form textarea {
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 200px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-#contact-form input:focus, #contact-form textarea:focus {
-    border-color: #337ab7;
+#contact-form textarea {
+    resize: vertical;
 }
 
-#contact-form button[type="submit"] {
+#contact-form button {
     background-color: #337ab7;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-#contact-form button[type="submit"]:hover {
+#contact-form button:hover {
     background-color: #23527c;
 }
 
+#contact-info {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+}
+
+#contact-info p {
+    margin-bottom: 10px;
+}
+
+#contact-info a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+#contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 20px;
+    }
+
+    #contact h2 {
+        font-size: 24px;
+    }
+
+    #contact-form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
 /* Footer Styles */
 
 footer {
