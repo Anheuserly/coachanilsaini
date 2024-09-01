@@ -1,0 +1,35 @@
+/* Cursor Trail Effect */
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e41212; /* Customize color */
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    z-index: 9999;
+}
+
+/* Additional circles for trail effect */
+.cursor::before,
+.cursor::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e41212; /* Customize color */
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
+
+.cursor::before {
+    top: -20px;
+    left: 0;
+}
+
+.cursor::after {
+    top: 20px;
+    left: 0;
+}

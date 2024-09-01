@@ -1,0 +1,78 @@
+#youtube-feed {
+    padding: 2.5rem 1.5rem; /* Adjusted padding for a balanced feel */
+    background-color: #ffffff; /* Clean, neutral background */
+    border-radius: 12px; /* Consistent rounding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle but present shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
+    margin: 3rem auto;
+    max-width: 750px; /* Slightly narrower for a more focused look */
+    
+}
+
+#youtube-feed:hover {
+    transform: translateY(-4px); /* Subtle lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+#youtube-feed h2 {
+    margin-bottom: 1.8rem;
+    font-size: 2.2rem; /* Medium heading size */
+    color: #2c3e50; /* Richer, deeper color */
+    font-weight: 700; /* Stronger emphasis */
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Increased spacing for modern appeal */
+}
+
+.youtube-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Consistent, even spacing */
+    justify-content: space-around; /* Ensures consistent spacing between videos */
+}
+
+.youtube-embed {
+    max-width: 48%; /* Slightly larger video embeds for better focus */
+    flex: 1 1 48%;
+    box-sizing: border-box;
+    margin-bottom: 2rem; /* Balanced spacing below each video */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.youtube-embed:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover for engagement */
+}
+
+.youtube-embed iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Consistent rounding on videos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light, subtle shadow */
+}
+
+.youtube-embed p {
+    margin-top: 1rem;
+    font-size: 1.1rem; /* Slightly larger for readability */
+    color: #555; /* Slightly darker text */
+    font-weight: 500; /* Balanced weight */
+}
+
+@media (max-width: 768px) {
+    .youtube-embed {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #youtube-feed {
+        padding: 2rem 1rem; /* Adjusted padding for very small screens */
+    }
+
+    #youtube-feed h2 {
+        font-size: 1.8rem; /* Smaller heading on very small screens */
+    }
+
+    .youtube-videos {
+        gap: 1.5rem; /* Adjusted gap for small screens */
+    }
+}

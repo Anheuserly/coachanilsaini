@@ -1,0 +1,25 @@
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #ebb5b5;
+    font-size: 1.5em; /* Adjust icon size */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+    color: #2c85e4; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.social-icon {
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+    fill: currentColor; /* Allows color changes via CSS */
+}
+

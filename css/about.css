@@ -1,0 +1,72 @@
+/* About Section */
+#about {
+    padding: 3rem 1.5rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    max-width: 1200px;
+    margin: 3rem auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+#about h2 {
+    font-size: 2.4rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Author Bio Section */
+#author-bio {
+    background-color: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+#author-bio h2 {
+    font-size: 2rem;
+    color: #34495e;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#author-bio p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #about h2, #author-bio h2 {
+        font-size: 2rem;
+    }
+
+    #about p, #author-bio p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #about h2, #author-bio h2 {
+        font-size: 1.8rem;
+    }
+
+    #about p, #author-bio p {
+        font-size: 0.9rem;
+    }
+}

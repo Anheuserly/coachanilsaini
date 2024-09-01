@@ -1,0 +1,145 @@
+/* #subscribe section styles */
+#subscribe {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#subscribe h2 {
+    font-size: 2em;
+    color: #00796b; /* Teal color */
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+#subscribe h2:hover {
+    color: #004d40; /* Darker teal on hover */
+}
+
+#subscribe p {
+    font-size: 1.2em;
+    color: #004d40;
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+#subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#subscribe-form input {
+    padding: 12px;
+    border: 2px solid #00796b;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#subscribe-form input:focus {
+    border-color: #004d40;
+    outline: none;
+}
+
+#subscribe-form button {
+    padding: 12px 24px;
+    border: none;
+    background-color: #00796b;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#subscribe-form button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+#subscribe-form button:active {
+    background-color: #00332e;
+}
+
+
+
+
+
+
+/* Subscriber Milestones Section */
+#subscriber-milestones {
+    background: #f9f9f9;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limit the width */
+    margin: 2rem auto; /* Center the section */
+    text-align: center;
+}
+
+#subscriber-milestones h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#subscriber-milestones .milestone-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#subscriber-milestones .milestone-content strong {
+    color: #007bff;
+    font-weight: 700;
+}
+
+.milestone-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.milestone-list li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.milestone-list li:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    #subscriber-milestones h2 {
+        font-size: 1.5rem;
+    }
+
+    #subscriber-milestones .milestone-content p {
+        font-size: 1rem;
+    }
+
+    .milestone-list li {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}

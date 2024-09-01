@@ -1,0 +1,238 @@
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #8f1111; /* Background color */
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    perspective: 1000px; /* For 3D effect */
+}
+
+/* Header Content */
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limit width */
+}
+
+/* Logo Styling */
+.logo {
+    max-width: 200px;
+    height: auto;
+    transform-style: preserve-3d; /* 3D transformations */
+    transition: transform 0.3s;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Hover Effect for Logo */
+.logo:hover {
+    transform: rotateY(10deg) scale(1.1); /* Rotate and scale on hover */
+}
+
+/* Navigation Menu Container */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+
+
+/* Navigation Menu */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Navigation Links */
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover Effect for Links */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #e41212, #f5b42b); /* Neon gradient */
+    transition: width 0.4s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.nav-links li a:hover {
+    color: #f5b42b; /* Neon color for text */
+    transform: scale(1.1); /* Enlarge text on hover */
+}
+
+/* Animation */
+.nav-links li a {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Neon Effect */
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(45deg, #e41212, #f5b42b); /* Neon gradient colors */
+    z-index: -1;
+    transition: width 0.4s, left 0.4s;
+    transform: translate(-50%, -50%);
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links li a:hover {
+    color: #f5b42b; /* Neon color for text */
+}
+
+/* Glowing Animation */
+.nav-links li a {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #e41212, 0 0 10px #e41212, 0 0 15px #e41212, 0 0 20px #f5b42b, 0 0 30px #f5b42b, 0 0 40px #f5b42b, 0 0 50px #f5b42b;
+    }
+    100% {
+        text-shadow: 0 0 10px #e41212, 0 0 20px #e41212, 0 0 30px #e41212, 0 0 40px #f5b42b, 0 0 60px #f5b42b, 0 0 80px #f5b42b, 0 0 100px #f5b42b;
+    }
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #e41212;
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+    color: #2c85e4; /* Change the color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Search Bar Styling */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 150px; /* Adjust the width as needed */
+    transition: transform 0.3s;
+}
+
+#search-input:focus {
+    transform: scale(1.05); /* Slightly enlarge on focus */
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #e41212;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #d11a1a;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    #search-input {
+        width: 100%;
+    }
+}

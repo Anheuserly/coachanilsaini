@@ -1,0 +1,59 @@
+/* Video Section */
+#video-gallery {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f4f4f4; /* Optional: Add a light background color for contrast */
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; /* Center the video items */
+}
+
+.video-item {
+    flex: 1 1 calc(25% - 1rem); /* Adjust to show 4 items per row */
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure images don't overflow */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.video-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.video-item img {
+    display: block; /* Ensure images take up full width */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.video-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0;
+    text-align: center; /* Center the text */
+    color: #333; /* Darker text color for contrast */
+}
+
+@media (max-width: 1200px) {
+    .video-item {
+        flex: 1 1 calc(33.333% - 1rem); /* 3 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-item {
+        flex: 1 1 calc(50% - 1rem); /* 2 items per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-item {
+        flex: 1 1 100%; /* 1 item per row on extra small screens */
+    }
+}
