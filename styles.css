@@ -252,52 +252,8 @@ header nav a:hover {
     margin-right: 20px;
 }
 
-/* Video Section */
 
-#videos {
-    margin-top: 40px;
-}
 
-/* Video List Styles */
-
-#video-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#video-list li {
-    width: 100%; /* Ensure videos take full width on small screens */
-    max-width: 560px; /* Max width of videos */
-    margin-bottom: 20px;
-}
-
-#video-list iframe {
-    width: 100%; /* Full width for responsiveness */
-    height: auto; /* Adjust height automatically */
-}
-
-/* Video Gallery Styles */
-
-#video-gallery {
-    margin-top: 20px;
-}
-
-#video-gallery ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#video-gallery li {
-    width: calc(33% - 20px); /* Adjust width to fit 3 videos per row with margin */
-    margin-bottom: 20px;
-}
-
-#video-gallery iframe {
-    width: 100%; /* Full width for responsiveness */
-    height: auto; /* Adjust height automatically */
-}
 
 /* About Section */
 
@@ -357,6 +313,9 @@ header nav a:hover {
         font-size: 24px;
     }
 }
+
+
+
 
 /* Contact Section */
 
