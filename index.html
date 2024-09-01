@@ -38,20 +38,22 @@
     </header>
     <!-- Hero section -->
     <section id="home">
-        <h1>Welcome to my YouTube Channel!</h1>
-        <!-- Latest video or blog post will be showcased here -->
-        <!-- Subscription form -->
-        <form action="https://www.youtube.com/subscription_center?add_user=COACHANILSAINI" method="post" target="_blank">
-          <input type="email" name="email" placeholder="Enter your email address" required>
-          <button type="submit">Subscribe</button>
-        </form>
-        <!-- Featured content section -->
-        <section id="featured-content">
+      <h1>Welcome to my YouTube Channel!</h1>
+      <p>Subscribe to stay updated with the latest videos!</p>
+      
+      <!-- Button to redirect users to YouTube channel -->
+    <form id="subscribe-form" action="https://www.youtube.com/@COACHANILSAINI" method="get" target="_blank" onsubmit="alert('You will be redirected to our YouTube channel!');">
+      <button type="submit">Visit Our YouTube Channel</button>
+  </form>
+      
+      <!-- Featured content section -->
+      <section id="featured-content">
           <h2>Featured Content</h2>
           <ul>
-            <!-- List of featured content will be generated here -->
+              <!-- List of featured content will be generated here -->
           </ul>
-        </section>
+      </section>
+  </section>
         <!-- Channel owner image -->
         <img src="channels4_profile.jpg" alt="Channel Owner" class="channel-owner-image">
     </section>
@@ -269,6 +271,9 @@
       </section>
     </footer>
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <!-- Include GSAP from a CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
