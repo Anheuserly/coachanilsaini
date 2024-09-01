@@ -1,33 +1,104 @@
-// script.js (updated)
-// Function to fetch YouTube video data
-async function fetchYouTubeVideos() {
-    const apiKey = 'YAIzaSyCfJ31gE271TFpNy1uNUZ8qfGfuYb_VmiE'; // Replace with your YouTube API key
-    const channelId = 'UC_x5XG1OV2P6uZZ5FSM9Ttw'; // Replace with your YouTube channel ID
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&type=video&maxResults=10&key=${apiKey}`;
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const videoList = document.getElementById('video-list');
-        videoList.innerHTML = '';
-        data.items.forEach((item) => {
-            const videoId = item.id.videoId;
-            const title = item.snippet.title;
-            const thumbnail = item.snippet.thumbnails.default.url;
-            const videoItem = document.createElement('li');
-            videoItem.innerHTML = `
-                <img src="${thumbnail}" alt="${title}">
-                <h3>${title}</h3>
-                <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">Watch on YouTube</a>
-            `;
-            videoList.appendChild(videoItem);
-        });
-    } catch (error) {
-        console.error(error);
+// GSAP Animations
+gsap.from("#home h1", { opacity: 0, y: -50, duration: 1 });
+gsap.from(".video-item", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2
+});
+gsap.from("#youtube-feed iframe", { opacity: 0, scale: 0.8, duration: 1, delay: 0.5 });
+
+// Swiper Initialization for any carousel
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+// Calendar Initialization (example with FullCalendar)
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: [
+            { title: 'Event 1', date: '2024-09-01' },
+            { title: 'Event 2', date: '2024-09-07' }
+        ]
+    });
+    calendar.render();
+});
+
+document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission
+
+    var email = document.getElementById('newsletter-email').value;
+
+    // Perform validation if necessary
+
+    // Send data using fetch or XMLHttpRequest
+    fetch('submit_newsletter.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: email }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Handle success
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      // Handle error
+      console.error('Error:', error);
+    });
+  });
+
+
+  document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission
+    const email = document.querySelector('input[name="email"]').value;
+    
+    if (validateEmail(email)) {
+        // You can perform AJAX requests here or handle the data before sending it to the server
+        console.log("Email is valid: " + email);
+        // Submit the form via AJAX or notify the user
+    } else {
+        alert("Please enter a valid email address.");
     }
+});
+
+function validateEmail(email) {
+    // Basic email validation
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
 }
 
-// Call the function to fetch YouTube videos on page load
-document.addEventListener('DOMContentLoaded', fetchYouTubeVideos);
 
-// Auto-update website every 1 hour
-setInterval(fetchYouTubeVideos, 3600000);
+  $(document).ready(function() {
+    $('#subscribe-form').submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+            url: 'subscribe.php',
+            type: 'POST',
+            data: $(this).serialize(),
+            success: function(response) {
+                // Handle the response from the server
+                alert('Subscription successful!');
+            },
+            error: function() {
+                // Handle errors
+                alert('An error occurred.');
+            }
+        });
+    });
+});
+
+  
